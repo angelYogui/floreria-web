@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FloreriA NGL | Restaurante & Gastronomía Botánica de Autor</title>
+  
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Bienvenido a FloreriA NGL. Una experiencia gastronómica de autor donde la alta cocina se fusiona con la botánica, flores comestibles y mixología sensorial. Reserva tu mesa hoy.">
+  <meta name="keywords" content="Floreria NGL, restaurante de autor, gastronomia botanica, flores comestibles, alta cocina, restaurante romantico, mixologia floral, reservas restaurante">
+  <meta name="author" content="FloreriA NGL">
+  
+  <!-- Open Graph / Redes Sociales -->
+  <meta property="og:title" content="FloreriA NGL - Gastronomía Botánica de Autor">
+  <meta property="og:description" content="Descubre nuestra carta inspirada en la naturaleza, flores comestibles y mixología de autor.">
+  <meta property="og:image" content="assets/images/hero_dish.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Estilos Principales -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Contenedor de Pétalos Botánicos Flotantes -->
+  <div class="petals-container" id="petals-container"></div>
+
+  <!-- ==========================================================================
+       HEADER & NAVBAR
+       ========================================================================== -->
+  <header class="header" id="main-header">
+    <div class="container nav-container">
+      <a href="#inicio" class="brand-logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-spa"></i>
+        </div>
+        <span>Floreri<span class="text-gold">A NGL</span></span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+        <li><a href="#menu" class="nav-link">La Carta</a></li>
+        <li><a href="#nosotros" class="nav-link">Filosofía</a></li>
+        <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+        <li><a href="#galeria" class="nav-link">Galería</a></li>
+        <li><a href="#reservas" class="nav-link">Reservar Mesa</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Botón de Carrito -->
+        <div class="cart-btn-wrapper">
+          <button class="cart-toggle-btn" id="cart-toggle-btn" title="Ver pedido" aria-label="Ver canasta de pedidos">
+            <i class="fa-solid fa-bag-shopping"></i>
+          </button>
+          <span class="cart-count" id="cart-count">0</span>
+        </div>
+
+        <a href="#reservas" class="btn btn-primary btn-sm">
+          <i class="fa-regular fa-calendar-check"></i> Reservar
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="inicio">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-status-pill">
+            <span class="pulse-dot"></span>
+            <span id="live-status-text" style="font-size: 0.85rem;">🟢 <strong>Abierto Ahora</strong> · Horario Gastronómico</span>
+          </div>
+
+          <span class="script-sub">Cocina de Autor & Esencia Floral</span>
+          <h1 class="hero-title">
+            El Arte Secreto de la <br>
+            <span class="text-gold">Gastronomía Botánica</span>
+          </h1>
+
+          <p class="hero-description">
+            En <strong>FloreriA NGL</strong> fusionamos la poesía de los jardines botánicos con la alta cocina contemporánea. Platillos de autor aromatizados con flores comestibles de cultivo orgánico propio y mixología de vanguardia.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#menu" class="btn btn-primary">
+              <i class="fa-solid fa-utensils"></i> Explorar La Carta
+            </a>
+            <a href="#reservas" class="btn btn-secondary">
+              <i class="fa-regular fa-calendar-days"></i> Reservar una Mesa
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <h4>100%</h4>
+              <p>Flores Orgánicas</p>
+            </div>
+            <div class="stat-item">
+              <h4>4.9 ★</h4>
+              <p>Calificación Gourmand</p>
+            </div>
+            <div class="stat-item">
+              <h4>3</h4>
+              <p>Ambientes de Lujo</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual / Image Showcase -->
+        <div class="hero-visual">
+          <div class="hero-image-card">
+            <img src="assets/images/hero_dish.jpg" alt="Plato insignia de FloreriA NGL con flores comestibles" id="hero-main-img">
+            
+            <div class="hero-floating-badge">
+              <i class="fa-solid fa-award" style="font-size: 1.8rem; color: var(--gold-primary);"></i>
+              <div>
+                <div style="font-weight: 700; font-size: 0.95rem;">Plato Insignia 2026</div>
+                <div style="font-size: 0.8rem; color: var(--text-muted);">Pato Glaseado con Hibiscus</div>
+              </div>
+            </div>
+
+            <div class="hero-floating-badge-2">
+              <span class="stars-rating">★★★★★</span>
+              <span style="font-size: 0.8rem; font-weight: 600;">+250 Comensales Felices</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HIGHLIGHTS / PILARES GASTRONÓMICOS
+       ========================================================================== -->
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <h3>Huerto Botánico Propio</h3>
+          <p>Cosechamos nuestras flores comestibles y hierbas aromáticas al amanecer para garantizar la máxima frescura y pureza en cada bocado.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+          <h3>Cocina de Autor</h3>
+          <p>Creaciones culinarias exclusivas que combinan técnicas modernas con extractos botánicos, logrando texturas y aromas inigualables.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-martini-glass-citrus"></i>
+          </div>
+          <h3>Mixología Floral & Humo</h3>
+          <p>Cócteles de autor infusionados con botánicos, licores florales y nieblas aromáticas diseñados para despertar tus sentidos.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-champagne-glasses"></i>
+          </div>
+          <h3>Atmósfera & Jardín Secreto</h3>
+          <p>Espacios íntimos rodeados de muros verdes, iluminación tenue a la luz de las velas y una atmósfera sofisticada e inolvidable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SOBRE NOSOTROS / NUESTRA HISTORIA
+       ========================================================================== -->
+  <section class="section" id="nosotros">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images-wrapper">
+          <img src="assets/images/interior.jpg" alt="Interior botánico de FloreriA NGL" class="about-img-main">
+          <img src="assets/images/cocktail.jpg" alt="Mixología botánica en FloreriA NGL" class="about-img-sub">
+        </div>
+
+        <div class="about-content">
+          <span class="script-sub">Nuestra Filosofía</span>
+          <h2 class="section-title">
+            Donde las Flores se Transforman en <span class="text-gold">Haute Cuisine</span>
+          </h2>
+          <p style="margin-bottom: 1.2rem; font-size: 1.05rem;">
+            <strong>FloreriA NGL</strong> nació de una pasión inusual: unir el refinado arte de la florería contemporánea con la más alta gastronomía sensorial. No somos un restaurante convencional; somos un santuario gastronómico donde cada plato cuenta una historia botánica.
+          </p>
+          <p>
+            Trabajamos mano a mano con botánicos y agricultores locales, seleccionando flores comestibles como pensamientos, violas, caléndulas, orquídeas y flores de borraja que aportan notas aromáticas únicas a cada preparación.
+          </p>
+
+          <div class="about-pills-list">
+            <div class="about-pill-item">
+              <div class="about-pill-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <strong style="color: var(--text-main);">Ingredientes 100% Trazables y Orgánicos</strong>
+                <p style="font-size: 0.88rem;">Sin pesticidas, respetando los ciclos estacionales de la naturaleza.</p>
+              </div>
+            </div>
+
+            <div class="about-pill-item">
+              <div class="about-pill-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <strong style="color: var(--text-main);">Maridaje de Vinos & Esencias Naturales</strong>
+                <p style="font-size: 0.88rem;">Una selecta cava internacional seleccionada por nuestro sommelier.</p>
+              </div>
+            </div>
+
+            <div class="about-pill-item">
+              <div class="about-pill-icon"><i class="fa-solid fa-check"></i></div>
+              <div>
+                <strong style="color: var(--text-main);">Experiencia Privada & Eventos Exclusivos</strong>
+                <p style="font-size: 0.88rem;">Espacios reservados para celebraciones, aniversarios y cenas corporativas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LA CARTA / MENÚ INTERACTIVO
+       ========================================================================== -->
+  <section class="section" id="menu" style="background: rgba(17, 30, 28, 0.4);">
+    <div class="container">
+      <div class="section-header">
+        <span class="script-sub">Selección Culinaria</span>
+        <h2 class="section-title">La Carta <span class="text-gold">Botánica</span></h2>
+        <p>Cada receta está elaborada artesanalmente con productos de estación, esencias florales y técnicas culinarias de vanguardia.</p>
+      </div>
+
+      <!-- Controles y Filtros del Menú -->
+      <div class="menu-controls">
+        <!-- Pestañas de Categorías -->
+        <div class="category-tabs">
+          <button class="tab-btn active" data-category="todos">
+            <i class="fa-solid fa-utensils"></i> Toda La Carta
+          </button>
+          <button class="tab-btn" data-category="entradas">
+            <i class="fa-solid fa-seedling"></i> Entradas Botánicas
+          </button>
+          <button class="tab-btn" data-category="fuertes">
+            <i class="fa-solid fa-drumstick-bite"></i> Platos Fuertes
+          </button>
+          <button class="tab-btn" data-category="pastas">
+            <i class="fa-solid fa-bowl-food"></i> Pastas & Risottos
+          </button>
+          <button class="tab-btn" data-category="cocteleria">
+            <i class="fa-solid fa-martini-glass"></i> Mixología & Vinos
+          </button>
+          <button class="tab-btn" data-category="postres">
+            <i class="fa-solid fa-cake-candles"></i> Postres de Autor
+          </button>
+        </div>
+
+        <!-- Filtros de Dieta & Búsqueda -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; width: 100%; gap: 1rem;">
+          <div class="filter-diet-row">
+            <span style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">Filtrar por:</span>
+            <button class="diet-chip" data-diet="chef">⭐ Recomendación Chef</button>
+            <button class="diet-chip" data-diet="veggie">🌱 Vegetariano</button>
+            <button class="diet-chip" data-diet="gluten-free">🌾 Sin Gluten</button>
+            <button class="diet-chip" data-diet="popular">🔥 Favorito NGL</button>
+          </div>
+
+          <div class="menu-search-wrapper">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="menu-search-input" class="menu-search-input" placeholder="Buscar por plato o ingrediente...">
+          </div>
+        </div>
+      </div>
+
+      <!-- Cuadrícula Dinámica de Platos -->
+      <div class="menu-grid" id="menu-grid">
+        <!-- Renderizado por app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BANNER EXPERIENCIA SENSORIAL
+       ========================================================================== -->
+  <section class="section" id="experiencia">
+    <div class="container">
+      <div class="experience-banner">
+        <div class="experience-banner-content">
+          <span class="script-sub">Un Viaje para los Sentidos</span>
+          <h2 style="font-size: clamp(2.2rem, 4vw, 3.4rem); margin: 0.6rem 0 1.2rem 0;">
+            Una Velada Mágica en Nuestro <br><span class="text-gold">Jardín Gastronómico</span>
+          </h2>
+          <p style="font-size: 1.1rem; max-width: 650px; margin: 0 auto 2rem auto; color: #d0e0dc;">
+            Disfruta de música ambiental en vivo, aromas botánicos envolventes, servicio de etiqueta y una carta diseñada para convertir cualquier ocasión en un recuerdo inolvidable.
+          </p>
+          <a href="#reservas" class="btn btn-primary">
+            <i class="fa-solid fa-sparkles"></i> Reservar Tu Experiencia
+          </a>
+
+          <div class="experience-grid">
+            <div class="exp-box">
+              <div class="exp-num">+50</div>
+              <p>Recetas Exclusivas</p>
+            </div>
+            <div class="exp-box">
+              <div class="exp-num">12</div>
+              <p>Variedades de Flores</p>
+            </div>
+            <div class="exp-box">
+              <div class="exp-num">100%</div>
+              <p>Satisfacción de Clientes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALERÍA FOTOGRÁFICA INTERACTIVA
+       ========================================================================== -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="script-sub">Nuestra Estética</span>
+        <h2 class="section-title">Galería de <span class="text-gold">Momentos NGL</span></h2>
+        <p>Una mirada a la elegancia de nuestros platillos, coctelería y acogedores espacios florales.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item span-2 row-2">
+          <img src="assets/images/interior.jpg" alt="Salón Principal FloreriA NGL" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Salón Principal & Jardín Vertical</h4>
+            <span>Ambiente nocturno con iluminación cálida</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/hero_dish.jpg" alt="Pato con reducción de Jamaica" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Pato Glaseado con Flores</h4>
+            <span>Plato insignia de la casa</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/cocktail.jpg" alt="Mixología con violetas y humo" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Mixología de Autor Ahumada</h4>
+            <span>Infusión con orquídeas y lavanda</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/appetizer.jpg" alt="Tartar de salmón botánico" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Tartar de Salmón & Violas</h4>
+            <span>Entrada fría de alta precisión</span>
+          </div>
+        </div>
+
+        <div class="gallery-item span-2">
+          <img src="assets/images/risotto.jpg" alt="Risotto de azafrán y trufa negra" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Risotto Dorado de Caléndula & Trufa</h4>
+            <span>Mantecado clásico con toque botánico</span>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="assets/images/dessert.jpg" alt="Panna cotta de lavanda con oro" loading="lazy">
+          <div class="gallery-overlay">
+            <h4>Panna Cotta de Lavanda & Oro 24k</h4>
+            <span>Final dulce y perfumado</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SISTEMA DE RESERVAS DE MESAS
+       ========================================================================== -->
+  <section class="section" id="reservas">
+    <div class="container">
+      <div class="reservation-card">
+        <div class="section-header" style="margin-bottom: 2.5rem;">
+          <span class="script-sub">Planifica Tu Visita</span>
+          <h2 class="section-title">Reserva de <span class="text-gold">Mesa Exclusiva</span></h2>
+          <p>Asegura tu lugar en nuestro bistró botánico. Confirmación instantánea y atención personalizada.</p>
+        </div>
+
+        <form id="table-booking-form">
+          <div class="booking-form-grid">
+            <!-- Nombre -->
+            <div class="form-group">
+              <label for="booking-name"><i class="fa-regular fa-user"></i> Nombre Completo *</label>
+              <input type="text" id="booking-name" class="form-control" placeholder="Ej. Carlos Mendoza" required>
+            </div>
+
+            <!-- Teléfono / WhatsApp -->
+            <div class="form-group">
+              <label for="booking-phone"><i class="fa-brands fa-whatsapp"></i> Teléfono / WhatsApp *</label>
+              <input type="tel" id="booking-phone" class="form-control" placeholder="Ej. +51 987 654 321" required>
+            </div>
+
+            <!-- Fecha -->
+            <div class="form-group">
+              <label for="booking-date"><i class="fa-regular fa-calendar"></i> Fecha *</label>
+              <input type="date" id="booking-date" class="form-control" required>
+            </div>
+
+            <!-- Hora -->
+            <div class="form-group">
+              <label for="booking-time"><i class="fa-regular fa-clock"></i> Hora de Servicio *</label>
+              <select id="booking-time" class="form-control" required>
+                <option value="" disabled selected>Seleccionar Horario</option>
+                <optgroup label="Almuerzo Botánico">
+                  <option value="12:30">12:30 PM</option>
+                  <option value="13:00">01:00 PM</option>
+                  <option value="13:30">01:30 PM</option>
+                  <option value="14:00">02:00 PM</option>
+                  <option value="14:30">02:30 PM</option>
+                  <option value="15:00">03:00 PM</option>
+                </optgroup>
+                <optgroup label="Cena de Autor & Velada">
+                  <option value="19:00">07:00 PM</option>
+                  <option value="19:30">07:30 PM</option>
+                  <option value="20:00">08:00 PM</option>
+                  <option value="20:30">08:30 PM</option>
+                  <option value="21:00">09:00 PM</option>
+                  <option value="21:30">09:30 PM</option>
+                  <option value="22:00">10:00 PM</option>
+                </optgroup>
+              </select>
+            </div>
+
+            <!-- Número de Comensales -->
+            <div class="form-group">
+              <label for="booking-guests"><i class="fa-solid fa-user-group"></i> Número de Personas *</label>
+              <select id="booking-guests" class="form-control" required>
+                <option value="1">1 Persona (Barra Sensorial)</option>
+                <option value="2" selected>2 Personas (Mesa Romántica)</option>
+                <option value="3">3 Personas</option>
+                <option value="4">4 Personas (Mesa Familiar)</option>
+                <option value="5">5 Personas</option>
+                <option value="6">6 Personas</option>
+                <option value="8+">8+ Personas (Mesa Ejecutiva / Grupo)</option>
+              </select>
+            </div>
+
+            <!-- Ocasión Especial -->
+            <div class="form-group">
+              <label for="booking-occasion"><i class="fa-solid fa-cake-candles"></i> Motivo / Ocasión</label>
+              <select id="booking-occasion" class="form-control">
+                <option value="Cena Casual">Cena Casual Gourmet</option>
+                <option value="Cita Romántica">Cita Romántica / Pareja</option>
+                <option value="Cumpleaños">Celebración de Cumpleaños</option>
+                <option value="Aniversario">Aniversario Especial</option>
+                <option value="Negocios">Reunión de Negocios</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Selector de Zona del Restaurante -->
+          <div class="form-group" style="margin-bottom: 2rem;">
+            <label><i class="fa-solid fa-location-dot"></i> Selecciona la Zona Preferida:</label>
+            <div class="zone-picker-grid">
+              <label class="zone-card-label">
+                <input type="radio" name="booking-zone" value="Terraza Jardín Botánico" checked>
+                <div class="zone-card-box">
+                  <i class="fa-solid fa-tree" style="color: #72e0b5; font-size: 1.3rem; margin-bottom: 0.3rem;"></i>
+                  <h5>Terraza Botánica</h5>
+                  <p>Al aire libre con luces de hadas y flores</p>
+                </div>
+              </label>
+
+              <label class="zone-card-label">
+                <input type="radio" name="booking-zone" value="Salón Principal & Jardín Vertical">
+                <div class="zone-card-box">
+                  <i class="fa-solid fa-couch" style="color: var(--gold-primary); font-size: 1.3rem; margin-bottom: 0.3rem;"></i>
+                  <h5>Salón Principal</h5>
+                  <p>Muros vegetales, terciopelo y velas</p>
+                </div>
+              </label>
+
+              <label class="zone-card-label">
+                <input type="radio" name="booking-zone" value="Cava VIP & Barra de Mixología">
+                <div class="zone-card-box">
+                  <i class="fa-solid fa-wine-bottle" style="color: #e8a598; font-size: 1.3rem; margin-bottom: 0.3rem;"></i>
+                  <h5>Cava VIP</h5>
+                  <p>Experiencia privada y cata exclusiva</p>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary" style="min-width: 280px;">
+              <i class="fa-solid fa-calendar-check"></i> Confirmar Solicitud de Reserva
+            </button>
+            <p style="font-size: 0.85rem; margin-top: 0.8rem; color: var(--text-muted);">
+              Te contactaremos de inmediato por WhatsApp para garantizar tu mesa.
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       TESTIMONIOS & CRÍTICAS
+       ========================================================================== */ -->
+  <section class="section" style="background: rgba(11, 20, 18, 0.6);">
+    <div class="container">
+      <div class="section-header">
+        <span class="script-sub">Experiencias Reales</span>
+        <h2 class="section-title">Lo Que Dicen <span class="text-gold">Nuestros Comensales</span></h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-rating" style="margin-bottom: 1rem;">★★★★★</div>
+            <p class="testimonial-quote">
+              "FloreriA NGL ha redefinido lo que significa salir a cenar. El pato glaseado con flor de jamaica fue una explosión sensorial inolvidable. El servicio y la ambientación floral son de nivel mundial."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">VA</div>
+            <div class="author-info">
+              <h5>Valeria Alarcón</h5>
+              <span>Crítica Gastronómica Independiente</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-rating" style="margin-bottom: 1rem;">★★★★★</div>
+            <p class="testimonial-quote">
+              "Celebramos nuestro aniversario en la Terraza Jardín Botánico. El cóctel Orquídea Violeta con humo aromático fue el punto culminante de la noche. ¡Recomendadísimo al 1000%!"
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">RM</div>
+            <div class="author-info">
+              <h5>Rodrigo & Marcela</h5>
+              <span>Comensales Habituales</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div>
+            <div class="stars-rating" style="margin-bottom: 1rem;">★★★★★</div>
+            <p class="testimonial-quote">
+              "La fusión de sabores sutiles y flores comestibles frescas eleva cada plato a una obra de arte. El risotto de azafrán con trufa y caléndula es sencillamente sublime."
+            </p>
+          </div>
+          <div class="testimonial-author">
+            <div class="author-avatar">MS</div>
+            <div class="author-info">
+              <h5>Mariana Salgado</h5>
+              <span>Chef & Sommelier</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       UBICACIÓN, HORARIOS & FAQ
+       ========================================================================== -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <span class="script-sub">Visítanos</span>
+        <h2 class="section-title">Ubicación & <span class="text-gold">Horarios</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Información y Horarios -->
+        <div class="contact-info-card">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+            <div>
+              <h4 style="margin-bottom: 0.3rem;">Dirección Gastronómica</h4>
+              <p>Av. Las Flores 450, Distrito Gourmet (San Isidro / Miraflores)</p>
+              <span style="font-size: 0.82rem; color: #72e0b5;">Estacionamiento privado & Valet Parking disponible</span>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <h4 style="margin-bottom: 0.3rem;">Contacto & Pedidos WhatsApp</h4>
+              <p>+51 999 888 777 · reservas@florerangl.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="fa-regular fa-clock"></i></div>
+            <div style="width: 100%;">
+              <h4 style="margin-bottom: 0.6rem;">Horario Semanal de Apertura</h4>
+              <table class="schedule-table">
+                <tr>
+                  <td>Lunes a Jueves</td>
+                  <td>12:30 PM - 11:30 PM</td>
+                </tr>
+                <tr>
+                  <td>Viernes y Sábados</td>
+                  <td>12:30 PM - 00:30 AM</td>
+                </tr>
+                <tr>
+                  <td>Domingos (Brunch Floral)</td>
+                  <td>12:00 PM - 10:30 PM</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preguntas Frecuentes FAQ -->
+        <div class="faq-accordion">
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.5rem; color: var(--gold-light);">
+            <i class="fa-solid fa-circle-question"></i> Preguntas Frecuentes
+          </h3>
+
+          <div class="faq-item open">
+            <button class="faq-question">
+              ¿Las flores en los platillos son realmente comestibles?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Sí, absolutamente. Todas nuestras flores provienen de nuestro invernadero certificado 100% orgánico, libre de cualquier pesticida o químico, cultivadas específicamente para consumo gastronómico de alta gama.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Tienen opciones para dietas vegetarianas o celíacos?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Contamos con una amplia variedad de opciones vegetarianas, veganas y libres de gluten señalizadas claramente en nuestra carta. Si tienes alergias específicas, nuestro chef adaptará tu menú.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Cuál es el código de vestimenta sugerido?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Sugerimos vestimenta Smart Casual / Elegante para preservar la atmósfera íntima y sofisticada de nuestro restaurante.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              ¿Puedo hacer pedidos para llevar o delivery?
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>¡Por supuesto! Puedes armar tu pedido directamente desde nuestra carta en esta página web y enviarlo con un solo clic a nuestro WhatsApp para coordinar tu entrega o retiro.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SLIDE-OVER CART / GESTOR DE PEDIDOS
+       ========================================================================== -->
+  <div class="cart-drawer-overlay" id="cart-drawer-overlay">
+    <div class="cart-drawer" id="cart-drawer">
+      <div class="cart-header">
+        <h3 style="font-size: 1.3rem; display: flex; align-items: center; gap: 0.6rem;">
+          <i class="fa-solid fa-basket-shopping" style="color: var(--gold-primary);"></i>
+          Tu Pedido Botánico
+        </h3>
+        <button class="cart-close-btn" id="cart-close-btn" aria-label="Cerrar pedido">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Lista de Artículos -->
+      <div class="cart-items-container" id="cart-items-container">
+        <!-- Renderizado dinámicamente por app.js -->
+      </div>
+
+      <!-- Pie del Carrito y Envío a WhatsApp -->
+      <div class="cart-footer">
+        <!-- Modalidad de Entrega -->
+        <div style="margin-bottom: 0.8rem;">
+          <label style="font-size: 0.82rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.4rem;">
+            Modalidad de Pedido:
+          </label>
+          <div class="delivery-options">
+            <label class="delivery-opt-label">
+              <input type="radio" name="delivery-type" value="Para Llevar (Takeout)" checked>
+              <span class="delivery-opt-btn">🥡 Para Llevar</span>
+            </label>
+            <label class="delivery-opt-label">
+              <input type="radio" name="delivery-type" value="Delivery a Domicilio">
+              <span class="delivery-opt-btn">🛵 Delivery</span>
+            </label>
+            <label class="delivery-opt-label">
+              <input type="radio" name="delivery-type" value="Consumo en Mesa / Salón">
+              <span class="delivery-opt-btn">🍽️ En Mesa</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Nombre y Notas del Cliente -->
+        <div style="margin-bottom: 0.8rem;">
+          <input type="text" id="order-customer-name" class="form-control" placeholder="Tu Nombre para el pedido" style="padding: 0.6rem 0.9rem; font-size: 0.88rem; margin-bottom: 0.5rem;">
+          <input type="text" id="order-notes" class="form-control" placeholder="Observaciones (ej. sin cebolla, alergias...)" style="padding: 0.6rem 0.9rem; font-size: 0.88rem;">
+        </div>
+
+        <div class="cart-totals-row">
+          <span>Total a Pagar:</span>
+          <span id="cart-total" class="text-gold">$0.00</span>
+        </div>
+
+        <button class="btn btn-primary" id="checkout-whatsapp-btn" style="width: 100%;">
+          <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Enviar Pedido por WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL DE DETALLE DEL PLATO
+       ========================================================================== -->
+  <div class="modal-backdrop" id="dish-detail-modal">
+    <div class="modal-content-card">
+      <button class="modal-close-btn" onclick="closeDishModal()" aria-label="Cerrar modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="dish-modal-content">
+        <!-- Renderizado dinámicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL DE CONFIRMACIÓN DE RESERVA
+       ========================================================================== -->
+  <div class="modal-backdrop" id="reservation-confirm-modal">
+    <div class="modal-content-card">
+      <button class="modal-close-btn" onclick="closeReservationModal()" aria-label="Cerrar modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="reservation-modal-content">
+        <!-- Renderizado dinámicamente -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL DE LIGHTBOX GALERÍA
+       ========================================================================== -->
+  <div class="modal-backdrop" id="gallery-lightbox-modal">
+    <div style="max-width: 900px; width: 100%; position: relative; text-align: center;">
+      <button class="modal-close-btn" onclick="closeLightbox()" style="top: -2.5rem; right: 0;">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img id="lightbox-image" src="" alt="Fotografía en alta resolución de FloreriA NGL" style="max-height: 80vh; margin: 0 auto; border-radius: var(--radius-md); border: 1px solid var(--border-strong);">
+      <div id="lightbox-caption" style="margin-top: 1rem; color: var(--gold-light); font-size: 1.1rem; font-family: var(--font-serif);"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       CONTENEDOR DE TOAST NOTIFICATIONS
+       ========================================================================== -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#inicio" class="brand-logo">
+            <div class="logo-icon"><i class="fa-solid fa-spa"></i></div>
+            <span>Floreri<span class="text-gold">A NGL</span></span>
+          </a>
+          <p>La máxima expresión de la cocina botánica y de autor. Una experiencia gastronómica creada para los paladares más exigentes.</p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" class="social-link-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-link-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://tiktok.com" target="_blank" class="social-link-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://whatsapp.com" target="_blank" class="social-link-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#menu">Nuestra Carta</a></li>
+            <li><a href="#nosotros">Historia & Huerto</a></li>
+            <li><a href="#experiencia">Experiencia Sensorial</a></li>
+            <li><a href="#galeria">Galería Fotográfica</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Servicios</h4>
+          <ul class="footer-links">
+            <li><a href="#reservas">Reservaciones</a></li>
+            <li><a href="#menu">Pedidos para Llevar</a></li>
+            <li><a href="#reservas">Eventos Privados & Cava VIP</a></li>
+            <li><a href="#contacto">Catering Gourmet</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Club Gourmet NGL</h4>
+          <p style="font-size: 0.88rem; margin-bottom: 0.8rem;">Suscríbete para recibir invitaciones a catas privadas, noches de autor y beneficios exclusivos.</p>
+          <form id="newsletter-form" class="newsletter-form">
+            <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Tu correo electrónico" required>
+            <button type="submit" class="btn btn-primary btn-sm" aria-label="Suscribirse">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 <strong>FloreriA NGL</strong>. Todos los derechos reservados. Cocina Botánica de Autor.</p>
+        <p>Diseño Web Gastronómico de Vanguardia</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts de la Aplicación -->
+  <script src="js/app.js"></script>
+</body>
+</html>
